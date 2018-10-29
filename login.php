@@ -10,9 +10,8 @@
 </head>
 
 <?php
-$db = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres")
+$db = pg_connect("host=localhost port=5434 dbname=tp2 user=postgres password=postgres")
 or die('No se ha podido conectar.');
-
 $query = "SELECT * FROM persona WHERE usuario = '$_POST[usuario]' AND clave = md5('$_POST[password]')";
 $result = pg_query($query);
 ?>
@@ -32,7 +31,6 @@ $result = pg_query($query);
     } else {
         echo ("Bienvenido/a, ");
     }
-
     while ($row = pg_fetch_row($result)) {
       echo $row[2];
       echo "<br />\n";
@@ -47,5 +45,14 @@ $result = pg_query($query);
 </div>
 
 </body>
+
+
+<?php
+// Liberando el conjunto de resultados
+pg_free_result($result);
+
+// Cerrando la conexión
+pg_close($dbc);
+?>
 
 </html>
