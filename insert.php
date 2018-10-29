@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TP2 - Usuario</title>
+    <title>TP2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap -->
@@ -11,11 +11,9 @@
 </head>
 
 <?php
-$db = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=postgres")
+$db = pg_connect("host=localhost port=5434 dbname=tp2 user=postgres password=postgres")
 or die('No se ha podido conectar.');
-
 $query = "INSERT INTO persona (apellido, nombre, usuario, clave) VALUES ('$_POST[apellido]','$_POST[nombre]','$_POST[usuario]', md5('$_POST[password]'))";
-
 $result = pg_query($query);
 ?>
 
