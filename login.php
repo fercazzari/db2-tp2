@@ -39,6 +39,7 @@ $result = pg_query($query);
     </p>
 
     <p> Acá va el query </p>
+    <p class="message"><a href="login.html">Volver</a></p>
     </form>
 
 </div>
@@ -50,7 +51,6 @@ $result = pg_query($query);
 <?php
 // Liberando el conjunto de resultados
 pg_free_result($result);
-
 // Cerrando la conexión
 pg_close($dbc);
 ?>
