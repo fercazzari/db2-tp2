@@ -29,7 +29,6 @@ $result = pg_query($query);
     }
     ?>
     </p>
-    <br>
     <p class="message"> <a href="login.html">Ingresar</a> </p>
     </form>
 </div>
