@@ -25,6 +25,7 @@
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+
 }
 
 .form button {
@@ -48,11 +49,22 @@
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 16px;
+  font-size: 14px;
 }
 .form .message a {
   color: #4CAF50;
   text-decoration: none;
+}
+.form .mensaje {
+  margin: 0px 0 0;
+  color: #b3b3b3;
+  font-size: 14px;
+  text-align: right;
+}
+.form .mensaje a {
+  color: #4CAF50;
+  text-decoration: none;
+
 }
 .form .register-form {
   display: none;
@@ -109,6 +121,7 @@ input[type=submit] {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  font-weight: bold;
 }
 
 body {
@@ -120,4 +133,8 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+table th, tr, td {
+    padding: 15px;
+    text-align: left;
 }
